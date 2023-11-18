@@ -7,10 +7,15 @@
   >
     <nav id="breadcrumb" aria-label="Breadcrumb">
       {% assign paths = page.url | split: '/' %}
+      <span>
+        <a href="{{ '/' | relative_url }}">
+          {{ site.title }}
+        </a>
+      </span>
 
-      {% if paths.size == 0 or page.layout == 'home' %}
+      <!-- {% if paths.size == 0 or page.layout == 'home' %} -->
         <!-- index page -->
-        <span>{{ site.data.locales[include.lang].tabs.home | capitalize }}</span>
+        <!-- <span>{{ site.data.locales[include.lang].tabs.home | capitalize }}</span>
 
       {% else %}
         {% for item in paths %}
@@ -36,7 +41,7 @@
             </span>
           {% endif %}
         {% endfor %}
-      {% endif %}
+      {% endif %} -->
     </nav>
     <!-- endof #breadcrumb -->
 
