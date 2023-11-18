@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |spec|
-  spec.name          = "jekyll-theme-chirpy"
+  spec.name          = "jekyll-theme-coo"
   spec.version       = "6.3.1"
   spec.authors       = ["Cotes Chung"]
   spec.email         = ["cotes.chung@gmail.com"]
 
-  spec.summary       = "A minimal, responsive, and feature-rich Jekyll theme for technical writing."
-  spec.homepage      = "https://github.com/cotes2020/jekyll-theme-chirpy"
+  spec.summary       = "Jekyll theme for online documentation based on Chirpy"
+  spec.homepage      = "https://github.com/quacksouls/jekyll-theme-coo"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f|
@@ -15,11 +15,11 @@ Gem::Specification.new do |spec|
   }
 
   spec.metadata = {
-    "bug_tracker_uri"   => "https://github.com/cotes2020/jekyll-theme-chirpy/issues",
-    "documentation_uri" => "https://github.com/cotes2020/jekyll-theme-chirpy/#readme",
-    "homepage_uri"      => "https://cotes2020.github.io/chirpy-demo",
-    "source_code_uri"   => "https://github.com/cotes2020/jekyll-theme-chirpy",
-    "wiki_uri"          => "https://github.com/cotes2020/jekyll-theme-chirpy/wiki",
+    "bug_tracker_uri"   => "https://github.com/quacksouls/jekyll-theme-coo/issues",
+    "documentation_uri" => "https://github.com/quacksouls/jekyll-theme-coo#readme",
+    "homepage_uri"      => "https://github.com/quacksouls/jekyll-theme-coo",
+    "source_code_uri"   => "https://github.com/quacksouls/jekyll-theme-coo",
+    "wiki_uri"          => "https://github.com/quacksouls/jekyll-theme-coo/wiki",
     "plugin_type"       => "theme"
   }
 

@@ -1,17 +1,17 @@
 {
-  "name": "jekyll-theme-chirpy",
+  "name": "jekyll-theme-coo",
   "version": "6.3.1",
-  "description": "A minimal, responsive, and feature-rich Jekyll theme for technical writing.",
+  "description": "Jekyll theme for online documentation based on Chirpy",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cotes2020/jekyll-theme-chirpy.git"
+    "url": "git+https://github.com/quacksouls/jekyll-theme-coo.git"
   },
   "author": "Cotes Chung",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cotes2020/jekyll-theme-chirpy/issues"
+    "url": "https://github.com/quacksouls/jekyll-theme-coo/issues"
   },
-  "homepage": "https://github.com/cotes2020/jekyll-theme-chirpy/",
+  "homepage": "https://github.com/quacksouls/jekyll-theme-coo",
   "scripts": {
     "prebuild": "npx rimraf assets/js/dist",
     "build": "NODE_ENV=production npx rollup -c --bundleConfigAsCjs",
