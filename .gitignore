@@ -19,4 +19,8 @@ package-lock.json
 .vscode
 
 # Misc
-assets/js/dist
+# We want to include the contents of the directory
+#
+# assets/js/dist
+#
+# from jekyll-theme-chirpy in this fork.
