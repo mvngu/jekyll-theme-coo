@@ -1,0 +1,24 @@
+<!-- MathJax support -->
+
+<script>
+    // See this file for more details:
+    // https://docs.mathjax.org/en/latest/options/input/tex.html
+    MathJax = {
+        tex: {
+            /* delimiter pairs for inline maths */
+            inlineMath: [
+                ['$', '$'],
+                ['\\(', '\\)']
+            ],
+            /* delimiter pairs for display maths */
+            displayMath: [
+                ['$$', '$$'],
+                ['\\[', '\\]']
+            ]
+        }
+    };
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" type="text/javascript"
+    async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js">
+</script>
