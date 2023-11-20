@@ -2,9 +2,9 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-coo"
-  spec.version       = "6.3.1"
-  spec.authors       = ["Cotes Chung"]
-  spec.email         = ["cotes.chung@gmail.com"]
+  spec.version       = "6.3.2"
+  spec.authors       = ["Cotes Chung", "Duck McSouls"]
+  spec.email         = ["cotes.chung@gmail.com", "quacksouls [AT] gmail [DOT] com"]
 
   spec.summary       = "Jekyll theme for online documentation based on Chirpy"
   spec.homepage      = "https://github.com/quacksouls/jekyll-theme-coo"
