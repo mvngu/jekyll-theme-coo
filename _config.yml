@@ -44,6 +44,19 @@ social:
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
 
+# The default license for each post.
+# The license will be displayed at the footer of each post.
+copyright:
+  license:
+    template: This work is licensed under :LICENSE_NAME
+    name: LicenseName
+    link: URL/to/license
+
+  # Displayed in the footer
+  brief: Some rights reserved.
+  verbose: >-
+    Brief overview of license.
+
 google_site_verification: # fill in to your verification string
 
 # ↑ --------------------------
