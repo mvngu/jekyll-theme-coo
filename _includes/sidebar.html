@@ -24,27 +24,28 @@
   </header>
   <!-- .profile-wrapper -->
 
+  <!-- Table of contents -->
   <nav class="flex-column flex-grow-1 w-100 ps-0">
     <ul class="nav">
-      <!-- home -->
-      <!-- <li class="nav-item{% if page.layout == 'home' %}{{ " active" }}{% endif %}">
-        <a href="{{ '/' | relative_url }}" class="nav-link">
-          <i class="fa-fw fas fa-home"></i>
-          <span>{{ site.data.locales[include.lang].tabs.home }}</span>
+    {% for item in site.data.toc.toc %}
+      <li class="nav-item{% if item.url == page.url %}{{ " active" }}{% endif %}">
+        <a href="{{ item.url }}" class="nav-link">
+          <span>{{ item.title }}</span>
         </a>
-      </li> -->
-      <!-- the real tabs -->
-      {% for tab in site.tabs %}
-        <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
-          <a href="{{ tab.url | relative_url }}" class="nav-link">
-            <!-- <i class="fa-fw {{ tab.icon }}"></i> -->
-            {% capture tab_name %}{{ tab.url | split: '/' }}{% endcapture %}
 
-            <span>{{ site.data.locales[include.lang].tabs.[tab_name] | default: tab.title }}</span>
-          </a>
-        </li>
-        <!-- .nav-item -->
-      {% endfor %}
+        {% if item.subfolder %}
+          <ul class="nav">
+            {% for sec in item.subfolder %}
+              <li class="nav-item{% if sec.url == page.url %}{{ " active" }}{% endif %}">
+                <a href="{{ sec.url }}" class="nav-link">
+                  <span>{{ sec.title }}</span>
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </li>
+    {% endfor %}
     </ul>
   </nav>
 
