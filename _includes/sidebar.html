@@ -27,7 +27,7 @@
   <!-- Table of contents -->
   <nav class="flex-column flex-grow-1 w-100 ps-0">
     <ul class="nav">
-    {% for item in site.data.nav.toc %}
+    {% for item in site.data.summary.toc %}
       <li class="nav-item{% if item.url == page.url %}{{ " active" }}{% endif %}">
         <a href="{{ item.url }}" class="nav-link">
           <span>{{ item.title }}</span>
