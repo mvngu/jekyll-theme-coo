@@ -1,55 +1,7 @@
 <!-- The Side Bar -->
 
 <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
-  <header class="profile-wrapper">
-    <a href="{{ '/' | relative_url }}" id="avatar" class="rounded-circle">
-      {% if site.avatar != empty and site.avatar %}
-        {% capture avatar_url %}
-            {% if site.avatar contains '://' %}
-              {{ site.avatar }}
-            {% elsif site.img_cdn != empty and site.img_cdn %}
-              {{ site.avatar | prepend: site.img_cdn }}
-            {% else %}
-              {{ site.avatar | relative_url }}
-            {% endif %}
-          {% endcapture %}
-        <img src="{{ avatar_url | strip }}" width="112" height="112" alt="avatar" onerror="this.style.display='none'">
-      {% endif %}
-    </a>
-
-    <h1 class="site-title">
-      <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
-    </h1>
-    <p class="site-subtitle fst-italic mb-0">{{ site.tagline }}</p>
-  </header>
-  <!-- .profile-wrapper -->
-
-  <!-- Table of contents -->
-  <nav class="flex-column flex-grow-1 w-100 ps-0">
-    <ul class="nav">
-    {% for item in site.data.summary.toc %}
-      <li class="nav-item{% if item.url == page.url %}{{ " active" }}{% endif %}">
-        <a href="{{ site.data.summary.prefix | append: item.url }}" class="nav-link">
-          <span>{{ item.title }}</span>
-        </a>
-
-        {% if item.subfolder %}
-          <ul class="nav">
-            {% for sec in item.subfolder %}
-              <li class="nav-item{% if sec.url == page.url %}{{ " active" }}{% endif %}">
-                <a href="{{ site.data.summary.prefix | append: sec.url }}" class="nav-link">
-                  <span>{{ sec.title }}</span>
-                </a>
-              </li>
-            {% endfor %}
-          </ul>
-        {% endif %}
-      </li>
-    {% endfor %}
-    </ul>
-  </nav>
-
-  <div class="sidebar-bottom d-flex flex-wrap  align-items-center w-100">
+  <div class="sidebar-top d-flex flex-wrap  align-items-center w-100">
     {% unless site.theme_mode %}
       <button type="button" class="mode-toggle btn" aria-label="Switch Mode">
         <i class="fas fa-adjust"></i>
@@ -101,6 +53,54 @@
       {% endif %}
     {% endfor %}
   </div>
-  <!-- .sidebar-bottom -->
+  <!-- .sidebar-top -->
+
+  <header class="profile-wrapper">
+    <a href="{{ '/' | relative_url }}" id="avatar" class="rounded-circle">
+      {% if site.avatar != empty and site.avatar %}
+        {% capture avatar_url %}
+            {% if site.avatar contains '://' %}
+              {{ site.avatar }}
+            {% elsif site.img_cdn != empty and site.img_cdn %}
+              {{ site.avatar | prepend: site.img_cdn }}
+            {% else %}
+              {{ site.avatar | relative_url }}
+            {% endif %}
+          {% endcapture %}
+        <img src="{{ avatar_url | strip }}" width="112" height="112" alt="avatar" onerror="this.style.display='none'">
+      {% endif %}
+    </a>
+
+    <h1 class="site-title">
+      <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    </h1>
+    <p class="site-subtitle fst-italic mb-0">{{ site.tagline }}</p>
+  </header>
+  <!-- .profile-wrapper -->
+
+  <!-- Table of contents -->
+  <nav class="flex-column flex-grow-1 w-100 ps-0">
+    <ul class="nav">
+    {% for item in site.data.summary.toc %}
+      <li class="nav-item{% if item.url == page.url %}{{ " active" }}{% endif %}">
+        <a href="{{ site.data.summary.prefix | append: item.url }}" class="nav-link">
+          <span>{{ item.title }}</span>
+        </a>
+
+        {% if item.subfolder %}
+          <ul class="nav">
+            {% for sec in item.subfolder %}
+              <li class="nav-item{% if sec.url == page.url %}{{ " active" }}{% endif %}">
+                <a href="{{ site.data.summary.prefix | append: sec.url }}" class="nav-link">
+                  <span>{{ sec.title }}</span>
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+  </nav>
 </aside>
 <!-- #sidebar -->

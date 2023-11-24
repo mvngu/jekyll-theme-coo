@@ -815,10 +815,10 @@ $btn-mb: 0.5rem;
     }
   }
 
-  .sidebar-bottom {
-    padding-left: 2rem;
+  .sidebar-top {
+    padding-left: 2.5rem;
     padding-right: 1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0rem;
 
     $btn-size: 1.75rem;
 
@@ -874,7 +874,7 @@ $btn-mb: 0.5rem;
       border-radius: 50%;
       margin-bottom: $btn-mb;
     }
-  } /* .sidebar-bottom */
+  } /* .sidebar-top */
 } /* #sidebar */
 
 @media (hover: hover) {
