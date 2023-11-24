@@ -875,6 +875,13 @@ $btn-mb: 0.5rem;
       margin-bottom: $btn-mb;
     }
   } /* .sidebar-top */
+
+  /* Vertical whitespace to separate last element from the bottom. */
+  .sidebar-bottom {
+    padding-left: 2.5rem;
+    padding-right: 1rem;
+    margin-bottom: 2rem;
+  }
 } /* #sidebar */
 
 @media (hover: hover) {
