@@ -20,5 +20,5 @@ Modification by:
 Copyright (c) 2023 Duck McSouls https://github.com/quacksouls
 
 [chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy
-[demo]: https://quacksouls.github.io/tekyll/
+[demo]: https://tekyllcoo.github.io
 [license]: https://github.com/quacksouls/jekyll-theme-coo/blob/master/LICENSE
