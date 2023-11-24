@@ -29,7 +29,7 @@
     <ul class="nav">
     {% for item in site.data.summary.toc %}
       <li class="nav-item{% if item.url == page.url %}{{ " active" }}{% endif %}">
-        <a href="{{ item.url }}" class="nav-link">
+        <a href="{{ site.data.summary.prefix | append: item.url }}" class="nav-link">
           <span>{{ item.title }}</span>
         </a>
 
@@ -37,7 +37,7 @@
           <ul class="nav">
             {% for sec in item.subfolder %}
               <li class="nav-item{% if sec.url == page.url %}{{ " active" }}{% endif %}">
-                <a href="{{ sec.url }}" class="nav-link">
+                <a href="{{ site.data.summary.prefix | append: sec.url }}" class="nav-link">
                   <span>{{ sec.title }}</span>
                 </a>
               </li>
