@@ -765,6 +765,7 @@ $btn-mb: 0.5rem;
     user-select: none;
   }
 
+  /* Presentation in normal window, not maximized */
   ul {
     margin-bottom: 0rem;
 
@@ -1522,6 +1523,7 @@ search {
       padding-left: 3.5rem;
     }
 
+    /* Presentation when window is maximimzed */
     ul {
       li.nav-item {
         @include pl-pr(1.5rem);
