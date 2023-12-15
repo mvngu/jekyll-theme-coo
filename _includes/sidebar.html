@@ -76,18 +76,18 @@
   <!-- Table of contents -->
   <nav class="flex-column flex-grow-1 w-100 ps-0">
     <ul class="nav">
-    {% for item in site.data.summary.toc %}
-      <li class="nav-item{% if item.url == page.url %}{{ " active" }}{% endif %}">
-        <a href="{{ site.data.summary.prefix | append: item.url }}" class="nav-link">
-          <span>{{ item.title }}</span>
+    {% for chapter in site.data.summary.toc %}
+      <li class="nav-item{% if chapter.url == page.url %}{{ " active" }}{% endif %}">
+        <a href="{{ site.data.summary.prefix | append: chapter.url }}" class="nav-link">
+          <span>{{ chapter.title }}</span>
         </a>
 
-        {% if item.subfolder %}
+        {% if chapter.subfolder %}
           <ul class="nav">
-            {% for sec in item.subfolder %}
-              <li class="nav-item{% if sec.url == page.url %}{{ " active" }}{% endif %}">
-                <a href="{{ site.data.summary.prefix | append: sec.url }}" class="nav-link">
-                  <span>{{ sec.title }}</span>
+            {% for section in chapter.subfolder %}
+              <li class="nav-item{% if section.url == page.url %}{{ " active" }}{% endif %}">
+                <a href="{{ site.data.summary.prefix | append: section.url }}" class="nav-link">
+                  <span>{{ section.title }}</span>
                 </a>
               </li>
             {% endfor %}
