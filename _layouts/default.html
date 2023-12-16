@@ -52,8 +52,6 @@ layout: compress
             {% include_cached footer.html lang=lang %}
           </div>
         </div>
-
-        {% include_cached search-results.html lang=lang %}
       </div>
 
       <aside aria-label="Scroll to Top">
@@ -72,7 +70,5 @@ layout: compress
     {% if page.mermaid %}
       {% include mermaid.html %}
     {% endif %}
-
-    {% include_cached search-loader.html %}
   </body>
 </html>
