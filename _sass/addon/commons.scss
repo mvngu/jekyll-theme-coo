@@ -770,6 +770,7 @@ $btn-mb: 0.5rem;
     margin-bottom: 0rem;
 
     li.nav-item {
+      display: none;
       opacity: 0.9;
       width: 100%;
       padding-left: 1rem;
@@ -797,6 +798,18 @@ $btn-mb: 0.5rem;
           font-size: 90%;
           letter-spacing: 0.2px;
         }
+      }
+
+      &.chapter {
+        display: block;
+      }
+
+      &.show {
+        display: block;
+      }
+
+      &.hide {
+        display: none;
       }
 
       &.active {

@@ -77,15 +77,31 @@
   <nav class="flex-column flex-grow-1 w-100 ps-0">
     <ul class="nav">
     {% for chapter in site.data.summary.toc %}
-      <li class="nav-item{% if chapter.url == page.url %}{{ " active" }}{% endif %}">
+      <li class="nav-item chapter{% if chapter.url == page.url %}{{ " active" }}{% endif %}">
         <a href="{{ site.data.summary.prefix | append: chapter.url }}" class="nav-link">
           <span>{{ chapter.title }}</span>
         </a>
 
+        {% assign showSection = "hide" %}
+        <!-- If the chapter is active, then show all its sections. -->
+        {% if chapter.url == page.url %}
+          {% assign showSection = "show" %}
+        {% else %}
+          <!-- If the chapter has an active section, then show all sections -->
+          <!-- in the chapter. -->
+          {% if chapter.subfolder %}
+            {% for section in chapter.subfolder %}
+              {% if section.url == page.url %}
+                {% assign showSection = "show" %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        {% endif %}
+
         {% if chapter.subfolder %}
           <ul class="nav">
             {% for section in chapter.subfolder %}
-              <li class="nav-item{% if section.url == page.url %}{{ " active" }}{% endif %}">
+              <li class="nav-item {{ showSection }}{% if section.url == page.url %}{{ " active" }}{% endif %}">
                 <a href="{{ site.data.summary.prefix | append: section.url }}" class="nav-link">
                   <span>{{ section.title }}</span>
                 </a>
